@@ -7,14 +7,12 @@ const sumAll = function(num1, num2) {
 
     if (((typeof num1 === "string")) || (typeof num2 === "string")) { // evaluate type of data
         return error;
-        
     } else if (((typeof num1 === "object")) || (typeof num2 === "object")) { 
         return error;
-
     } else if ((biggerValue >= 0) && (smallerValue >= 0)) { // as long as both values are not negative, process the loop
             for (let i = smallerValue; i <= biggerValue; i++) { // i has to be equal to or less than...
                                   // incrementing by one each time
-                finalSum = finalSum + 1;
+                finalSum = finalSum + i;
             }
     } else return error; // for negative numbers
         return finalSum;
