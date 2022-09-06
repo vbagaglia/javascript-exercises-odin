@@ -12,7 +12,7 @@ const sumAll = function(num1, num2) {
     } else if ((biggerValue >= 0) && (smallerValue >= 0)) { // as long as both values are not negative, process the loop
             for (let i = smallerValue; i <= biggerValue; i++) { // i has to be equal to or less than...
                                   // incrementing by one each time
-                finalSum = finalSum + i;
+                finalSum = finalSum + i; // in this instance 'i' will be the smallerValue
             }
     } else return error; // for negative numbers
         return finalSum;
