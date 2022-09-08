@@ -1,8 +1,8 @@
-const leapYears = function(yearInput) {
+const leapYears = function(year) {
     let leapCheck;
 
     // if divisible by 100... false
-    if (((yearInput % 4 === 0) && (yearInput % 100 != 0)) || (yearInput % 400 === 0)) {
+    if (((year % 4 === 0) && (year % 100 != 0)) || (year % 400 === 0)) {
         leapCheck = true; // if divisible by 4 AND 400... true
     } else {
         leapCheck = false;
