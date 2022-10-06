@@ -1,17 +1,17 @@
-const isPalindrome = function (str) {
-    let strRegex = str.replace(/[^a-z]/g, ""); // strips all punctuation with regex
+const palindromes = function (str) {
+    let strRegex = str.replace(/[.,\/#!$%\^&\*;:{}=\-_'~()]/g,""); // strips all punctuation with regex
 
-    let finalStripPunc = strRegex.replace(/ /g, ""); // removes multi word whitespace with regex
+    let strRegexWhiteSpace = strRegex.replace(/ /g,""); // removes multi word whitespace with regex
 
-    let finalString = finalStripPunc.toLowerCase;
+    let strRegexLowerCase = strRegexWhiteSpace.toLowerCase(); // upper case gone
 
-    let splitStr = finalString.split("");
+    let splitString = strRegexLowerCase.split("");
 
-    let reverseArr = splitStr.reverse("");
+    let reverseArray = splitString.reverse("");
 
-    let finalReverseStr = reverseArr.join("");
+    let reverseString = reverseArray.join("");
 
-    if(finalString === finalReverseStr) {
+    if(strRegexLowerCase === reverseString) {
         return true;
     } else return false; 
 };
